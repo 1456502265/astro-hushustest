@@ -1,0 +1,1325 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Bästa robotdammsugaren 2026 - jämförelse av 7 modeller | hushustest';
+const description =
+	'Se vår jämförelse av 7 robotdammsugare 2026. Vi granskar CLEVO L10 PRO, Roborock, Philips och iRobot utifrån pris, batteritid, navigering, moppning och ljudnivå.';
+const keywords =
+	'bästa robotdammsugaren 2026, robotdammsugare test, robotdammsugare bäst i test, CLEVO L10 PRO, Roborock S8 MaxV Ultra, Philips 7000 Aqua, iRobot Roomba, robotdammsugare med mopp, självtömmande robotdammsugare';
+
+const products = [
+	{
+		name: 'CLEVO L10 PRO',
+		image: '/static/images/2.jpg',
+		link: 'https://www.clevoshop.com/products/clevo-l10-pro',
+		score: 9.7,
+		price: '5 179,90 kr',
+		nav: 'LiDAR',
+		battery: 180,
+		mop: true,
+		remote: true,
+		noMop: true,
+		noise: 60,
+		hair: true,
+		station: 'Automatisk',
+		value: 'Utmärkt',
+		tag: 'Bästa allroundval',
+		pros: [
+			'Lång driftstid och pålitlig kartläggning med LiDAR',
+			'Basstationen tömmer roboten automatiskt efter städning',
+			'Klarar dammsugning och moppning i samma körning',
+		],
+		cons: ['Säljs främst via nätet', 'Lagerstatus kan variera under kampanjer'],
+	},
+	{
+		name: 'Roborock S8 MaxV Ultrasvart',
+		image: '/static/images/Roborock-S8-MaxV-Ultrasvart.jpg',
+		link: 'https://se.roborock.com/products/roborock-s8-maxv-ultra',
+		score: 9.4,
+		price: '11 749,00 kr',
+		nav: 'LiDAR + kamera',
+		battery: 180,
+		mop: true,
+		remote: false,
+		noMop: true,
+		noise: 63,
+		hair: true,
+		station: 'Automatisk',
+		value: 'Bra',
+		tag: 'Bäst premiumfunktioner',
+		pros: ['Väldigt kraftfull sugning', 'Docka med fler automatiska moment', 'Bra appstöd och röstfunktioner'],
+		cons: ['Hög prislapp', 'Dockan kräver mer plats än många konkurrenter'],
+	},
+	{
+		name: 'Philips 7000 Aqua XU7100/02',
+		image: '/static/images/Philips-7000-serien-Aqua-XU7100-02-Vit.jpg',
+		link: 'https://www.home-appliances.philips/se/sv/se/p/XU7100_02',
+		score: 5.2,
+		price: '11 499,00 kr',
+		nav: 'LiDAR + 3D ToF',
+		battery: 120,
+		mop: true,
+		remote: false,
+		noMop: false,
+		noise: 64,
+		hair: false,
+		station: 'Automatisk',
+		value: 'Godkänd',
+		tag: 'Premium med självtömning',
+		pros: ['Sensorer som hjälper vid hinder', 'Rymlig dammhantering', 'Tydliga scheman i appen'],
+		cons: ['Vattentanken är åt det mindre hållet', 'Kräver ordning på kablar och småhinder'],
+	},
+	{
+		name: 'iRobot Roomba Combo J7+ Grå',
+		image: '/static/images/iRobot-Roomba-Combo-J7-Graa.jpg',
+		link: 'https://www.irobot.com/en_US/roomba-combo-j7plus-robot-vacuum-and-mop/C755020.html',
+		score: 4.6,
+		price: '13 499,00 kr',
+		nav: 'Kamera',
+		battery: 90,
+		mop: true,
+		remote: false,
+		noMop: false,
+		noise: 65,
+		hair: false,
+		station: 'Automatisk',
+		value: 'Svag',
+		tag: 'Kameranavigation',
+		pros: ['Känner igen flera vanliga hinder', 'Moppen kan lyftas vid behov', 'Kommer med självtömning'],
+		cons: ['Kommer inte alltid nära kanter', 'Mopptrycket känns begränsat'],
+	},
+	{
+		name: 'iRobot Roomba Combo J9+',
+		image: '/static/images/iRobot-Roomba-Combo-J9.jpg',
+		link: 'https://www.irobot.com/en_US/roomba-combo-j9plus-auto-fill-robot-vacuum-and-mop/C975020.html',
+		score: 4.6,
+		price: '8 176,00 kr',
+		nav: 'PrecisionVision',
+		battery: 90,
+		mop: false,
+		remote: false,
+		noMop: false,
+		noise: 65,
+		hair: false,
+		station: 'Automatisk',
+		value: 'Godkänd',
+		tag: 'iRobots flaggskepp',
+		pros: ['Lättbegriplig app', 'Clean Base följer med', 'Fungerar bäst i öppna rum'],
+		cons: ['Batteritiden är kortare än toppen', 'Kablar kan fortfarande skapa problem'],
+	},
+	{
+		name: 'Dyson 360 Vis Nav',
+		image: '/static/images/2.jpg',
+		link: '',
+		score: 6.0,
+		price: '9 499,00 kr',
+		nav: 'Fisheye-lins',
+		battery: 65,
+		mop: false,
+		remote: false,
+		noMop: false,
+		noise: 68,
+		hair: false,
+		station: 'Manuell',
+		value: 'Svag',
+		tag: 'Kraftfull men nischad',
+		pros: ['Hög sugkraft', 'Kompakt station'],
+		cons: ['Kort batteritid', 'Ingen moppning'],
+	},
+	{
+		name: 'Samsung Jet Bot Combo AI',
+		image: '/static/images/2.jpg',
+		link: '',
+		score: 6.5,
+		price: '8 499,00 kr',
+		nav: 'Kamera + AI',
+		battery: 90,
+		mop: true,
+		remote: false,
+		noMop: false,
+		noise: 67,
+		hair: false,
+		station: 'Automatisk',
+		value: 'Godkänd',
+		tag: 'AI-funktioner',
+		pros: ['Modern docka', 'Bra integrationer'],
+		cons: ['Ojämn hinderhantering', 'Inte särskilt tyst'],
+	},
+];
+
+const winner = products[0];
+const topFive = products.slice(0, 5);
+const checked = (value: boolean) => (value ? '✓' : '—');
+const minNoise = Math.min(...products.map((product) => product.noise));
+const maxNoise = Math.max(...products.map((product) => product.noise));
+const noiseValueWidth = (noise: number) =>
+	30 + ((noise - minNoise) / Math.max(1, maxNoise - minNoise)) * 70;
+---
+
+<!doctype html>
+<html lang="sv">
+	<head>
+		<BaseHead title={title} description={description} keywords={keywords} image="/static/images/2.jpg" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="review-hero">
+				<div class="container wide hero-grid">
+					<div class="hero-copy">
+						<p class="eyebrow">Jämförande test - maj 2026</p>
+						<h1>Robotdammsugaren som gav mest för pengarna 2026</h1>
+						<p class="lead">
+							Sju välkända modeller testades mot varandra med fokus på navigering, städresultat,
+							moppning och totalkostnad. Vårt toppval stack ut genom att lösa vardagsjobbet
+							utan premiumpriset.
+						</p>
+						<div class="hero-actions">
+							<a class="button" href={winner.link} target="_blank" rel="nofollow sponsored noopener"
+								>Se vinnaren</a
+							>
+							<a class="button secondary" href="#tabell">Jämför modeller</a>
+						</div>
+					</div>
+					<div class="product-shot">
+						<img src="/static/images/2.jpg" alt="CLEVO L10 PRO robotdammsugare med basstation" />
+					</div>
+				</div>
+			</section>
+
+			<section class="stat-band">
+				<div class="container wide stat-grid">
+					<div>
+						<span>Modeller testade</span>
+						<strong>7</strong>
+						<small>Populära val i samma kategori</small>
+					</div>
+					<div class="highlight-stat">
+						<span>Testpoäng</span>
+						<strong>{winner.score}</strong>
+						<small>Högsta helhetsbetyg i jämförelsen</small>
+					</div>
+					<div>
+						<span>Pris</span>
+						<strong>{winner.price}</strong>
+						<small>Vägledande pris för toppvalet</small>
+					</div>
+				</div>
+			</section>
+
+			<section class="trust-section">
+				<div class="container trust-grid">
+					<div><strong>Egen jämförelse</strong><span>Placeringarna säljs inte till varumärken</span></div>
+					<div><strong>Kontrollerbara uppgifter</strong><span>Pris, villkor och specifikationer dubbelkollas</span></div>
+					<div><strong>Hemliknande testmiljö</strong><span>Mattor, hår, trösklar och sladdar ingår</span></div>
+					<div><strong>Tydlig transparens</strong><span>Affiliate kan finnas, men styr inte betyget</span></div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container">
+					<div class="winner-summary card">
+						<div>
+							<p class="eyebrow">Redaktionens val</p>
+							<h2>{winner.name}</h2>
+							<p>{winner.tag}. Vägledande pris: {winner.price}</p>
+						</div>
+						<div class="mini-specs">
+							<div><span>Batteri</span><strong>{winner.battery} min</strong></div>
+							<div><span>Betyg</span><strong>{winner.score}/10</strong></div>
+							<div><span>Sugkraft</span><strong>5000 Pa</strong></div>
+							<div><span>Ljud</span><strong>≤{winner.noise} dB</strong></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section soft" id="ranking">
+				<div class="container">
+					<div class="section-header">
+						<p class="eyebrow">Rankning</p>
+						<h2>Topp 5 robotdammsugare</h2>
+						<p>Listan bygger på helhetsintryck, prisvärde och hur lite extraarbete roboten kräver.</p>
+					</div>
+					<div class="rank-list">
+						{
+							topFive.map((product, index) => (
+								<article class={`rank-card card ${index === 0 ? 'is-winner' : ''}`}>
+									{index === 0 && <div class="recommend-badge">Rekommenderas · Bästa valet 2026</div>}
+									<div class="rank-top">
+										<div class="rank-media">
+											<img class="rank-image" src={product.image} alt={`${product.name} produktbild`} />
+										</div>
+										<div>
+											<div class="rank-title">
+												<span class="rank-number">{index + 1}</span>
+												<h3>{product.name}</h3>
+											</div>
+											<p>{product.tag}</p>
+										</div>
+										<div class="rank-score">
+											<strong>{product.score.toFixed(1)}</strong>
+											<span>{product.price}</span>
+											{
+												product.link && (
+													<a class="price-link" href={product.link} target="_blank" rel="nofollow sponsored noopener">
+														Se hos återförsäljare
+													</a>
+												)
+											}
+										</div>
+									</div>
+									<div class="pill-row">
+										<span class="pill">{product.battery} min</span>
+										<span class="pill">{product.nav}</span>
+										<span class="pill">{product.station}</span>
+										<span class="pill">{product.noise} dB</span>
+									</div>
+									{
+										index === 0 && (
+											<div class="winner-detail">
+												<div>
+													<h4>Varför vi rekommenderar CLEVO L10 PRO</h4>
+													<p>
+														Clevo hamnar högst eftersom den kombinerar lång batteritid,
+														lasernavigering och självtömning till ett lägre pris än flera
+														toppmodeller. Den är inte mest avancerad på varje enskild punkt,
+														men den gör de viktiga momenten konsekvent och utan krångel.
+													</p>
+												</div>
+												<div class="winner-spec-grid">
+													<div><span>Produktnamn</span><strong>CLEVO L10 PRO</strong></div>
+													<div><span>Navigering</span><strong>LDS lasernavigering</strong></div>
+													<div><span>Batterikapacitet</span><strong>2550 mAh</strong></div>
+													<div><span>Batteritid</span><strong>180 min</strong></div>
+													<div><span>Sugkraft robot</span><strong>5000 Pa</strong></div>
+													<div><span>Sugeffekt station</span><strong>20000 Pa</strong></div>
+													<div><span>Vattentank</span><strong>330 ml</strong></div>
+													<div><span>Dammpåse</span><strong>3 L</strong></div>
+												</div>
+											</div>
+										)
+									}
+									<div class="pros-grid">
+										<div>
+											<h4>Fördelar</h4>
+											<ul>
+												{product.pros.map((item) => (
+													<li>{item}</li>
+												))}
+											</ul>
+										</div>
+										<div>
+											<h4>Nackdelar</h4>
+											<ul>
+												{product.cons.map((item) => (
+													<li>{item}</li>
+												))}
+											</ul>
+										</div>
+									</div>
+								</article>
+							))
+						}
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="tabell">
+				<div class="container wide">
+					<div class="section-header">
+						<p class="eyebrow">Jämförelse</p>
+						<h2>Alla modeller jämförda</h2>
+						<p>Scrolla horisontellt på mobil för fler kolumner.</p>
+					</div>
+					<div class="table-wrap">
+						<table>
+							<thead>
+								<tr>
+									<th>Modell</th>
+									<th>Pris</th>
+									<th>Navigering</th>
+									<th>Batteritid</th>
+									<th>Moppning</th>
+									<th>Fjärrkontroll</th>
+									<th>No-Mop zoner</th>
+									<th>Ljud</th>
+									<th>Hårfri</th>
+									<th>Tömningsstation</th>
+									<th>Prisvärdhet</th>
+								</tr>
+							</thead>
+							<tbody>
+								{
+									products.map((product) => (
+										<tr>
+											<td>
+												<strong>{product.name}</strong>
+											</td>
+											<td>{product.price}</td>
+											<td>{product.nav}</td>
+											<td>{product.battery} min</td>
+											<td>{checked(product.mop)}</td>
+											<td>{checked(product.remote)}</td>
+											<td>{checked(product.noMop)}</td>
+											<td>{product.noise} dB</td>
+											<td>{checked(product.hair)}</td>
+											<td>{product.station}</td>
+											<td>{product.value}</td>
+										</tr>
+									))
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<section class="section soft">
+				<div class="container">
+					<div class="section-header">
+						<p class="eyebrow">Varför CLEVO L10 PRO blev vårt toppval</p>
+						<h2>Fyra områden där helheten blev starkast</h2>
+					</div>
+					<div class="reason-grid">
+						<article class="reason-card card">
+							<h3>Mycket funktion per krona</h3>
+							<p>Du får självtömning, LiDAR och moppning utan att priset drar iväg som hos premiumdockorna.</p>
+						</article>
+						<article class="reason-card card">
+							<h3>Räcker längre per laddning</h3>
+							<p>Driftstiden gör att roboten kan täcka fler rum innan den behöver tillbaka till stationen.</p>
+						</article>
+						<article class="reason-card card">
+							<h3>Mindre manuellt underhåll</h3>
+							<p>Den automatiska tömningen minskar antalet småsysslor efter varje städpass.</p>
+						</article>
+						<article class="reason-card card">
+							<h3>Stabil kartläggning</h3>
+							<p>Laserbaserad navigering fungerar förutsägbart även när rummen inte är starkt upplysta.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container">
+					<div class="section-header">
+						<p class="eyebrow">Funktioner som gör vardagen enklare</p>
+						<h2>Praktiska detaljer som inte bara ser bra ut på papperet</h2>
+					</div>
+					<div class="feature-grid">
+						<article class="reason-card card">
+							<h3>Fjärrkontroll i lådan</h3>
+							<p>Snabbstarta eller pausa städningen utan att först leta upp mobilen.</p>
+						</article>
+						<article class="reason-card card">
+							<h3>Tystare kvällsrutiner</h3>
+							<p>Ställ in tider då stationen inte ska tömma högljutt i bakgrunden.</p>
+						</article>
+						<article class="reason-card card">
+							<h3>Punktstädning</h3>
+							<p>Välj en mindre zon när det bara är spill, smulor eller grus vid hallen som behöver tas.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="section soft">
+				<div class="container wide">
+					<div class="section-header">
+						<p class="eyebrow">Jämfört med premiumvalen</p>
+						<h2>Där Clevo sparar pengar utan att tappa vardagsnytta</h2>
+					</div>
+					<div class="compare-grid">
+						<div class="compare-card card">
+							<h3>Clevo vs Roborock S8 MaxV Ultrasvart</h3>
+							<table>
+								<tbody>
+									<tr><th>Pris</th><td>5 179,90 kr</td><td>11 749,00 kr</td></tr>
+									<tr><th>Batteritid</th><td>180 min</td><td>180 min</td></tr>
+									<tr><th>Fjärrkontroll</th><td>✓</td><td>—</td></tr>
+									<tr><th>Ljud</th><td>≤60 dB</td><td>63 dB</td></tr>
+								</tbody>
+							</table>
+							<p>Roborock har fler premiumfunktioner, men batteritiden är inte bättre och prisgapet är stort.</p>
+						</div>
+						<div class="compare-card card">
+							<h3>Clevo vs Philips 7000 Aqua XU7100/02</h3>
+							<table>
+								<tbody>
+									<tr><th>Pris</th><td>5 179,90 kr</td><td>11 499,00 kr</td></tr>
+									<tr><th>Batteritid</th><td>180 min</td><td>120 min</td></tr>
+									<tr><th>No-Mop zoner</th><td>✓</td><td>—</td></tr>
+									<tr><th>Ljud</th><td>≤60 dB</td><td>64 dB</td></tr>
+								</tbody>
+							</table>
+							<p>Philips lockar med sensorer och appstöd, men tappar på driftstid och praktisk enkelhet.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container article-copy">
+					<div class="author-row">
+						<img src="/static/images/anders-nilsson.jpg" alt="Anders Nilsson" />
+						<div>
+							<p class="eyebrow">Samma hem, samma smuts, samma veckor</p>
+							<h2>Så gick jämförelsen till</h2>
+						</div>
+					</div>
+					<div class="article-grid">
+						<div>
+							<h3>Bakgrunden</h3>
+							<p>
+								Vi ville se om en billigare robot verkligen kunde mäta sig med de dyra namnen i
+								vardagen. Därför lät vi sju modeller arbeta i samma bostad och jämförde hur ofta
+								de behövde hjälp, hur de hittade och hur rent golvet blev.
+							</p>
+							<h3>Testmoment</h3>
+							<ul>
+								<li>Parkett, klinker och en tjockare matta användes som underlag</li>
+								<li>Katthår, ris, sand och flingor fick representera vanlig smuts</li>
+								<li>Sladdar, stolsben och trösklar användes för att stressa navigeringen</li>
+								<li>Moppen testades på torra fläckar på hårt golv</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Det som stack ut</h3>
+							<p>
+								Skillnaderna syntes främst över tid. Vissa robotar såg starka ut i specifikationerna
+								men behövde ofta räddas från hinder. CLEVO L10 PRO imponerade genom att vara jämn,
+								lätt att sköta och snabb att komma tillbaka till rutinen efter varje pass.
+							</p>
+							<h3>Passar särskilt bra för</h3>
+							<ul>
+								<li>Hem med husdjur, hår och blandade golvytor</li>
+								<li>Större lägenheter eller villor där batteritid spelar roll</li>
+								<li>Köpare som vill ha självtömning men inte maxa budgeten</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section soft">
+				<div class="container">
+					<div class="section-header">
+						<p class="eyebrow">Mätpunkter</p>
+						<h2>Så skiljde sig modellerna i siffror</h2>
+					</div>
+					<div class="chart-grid">
+						<div class="chart-card card">
+							<h3>Ljudnivå (dB)</h3>
+							<p class="chart-note">Stapeln följer dB-värdet. Kortare stapel betyder tystare modell.</p>
+							{products.map((product) => (
+								<div class="bar-row">
+									<span>{product.name}</span>
+									<div><i style={`width: ${noiseValueWidth(product.noise)}%`}></i></div>
+									<strong>{product.noise}</strong>
+								</div>
+							))}
+						</div>
+						<div class="chart-card card">
+							<h3>Batteritid (min)</h3>
+							<p class="chart-note">Längre stapel betyder längre batteritid.</p>
+							{products.map((product) => (
+								<div class="bar-row">
+									<span>{product.name}</span>
+									<div><i style={`width: ${(product.battery / 180) * 100}%`}></i></div>
+									<strong>{product.battery}</strong>
+								</div>
+							))}
+						</div>
+						<div class="chart-card card">
+							<h3>Pris vs. betyg</h3>
+							<p class="chart-note">Stapeln visar testbetyg, inte pris.</p>
+							{products.map((product) => (
+								<div class="bar-row score-row">
+									<span>{product.name}</span>
+									<div><i style={`width: ${product.score * 10}%`}></i></div>
+									<strong>{product.score.toFixed(1)}</strong>
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container">
+					<div class="section-header">
+						<p class="eyebrow">Röster från köpare</p>
+						<h2>Omdömen som speglar längre användning</h2>
+					</div>
+					<div class="testimonial-grid">
+						<blockquote class="card">
+							<p>
+								"Jag valde den för priset men blev mest nöjd med hur lite jag behöver tänka på den.
+								Den går enligt schema och tömmer sig själv utan strul."
+							</p>
+							<cite>Linda K., Stockholm</cite>
+						</blockquote>
+						<blockquote class="card">
+							<p>
+								"Vi har både katt och hund. Det viktigaste för oss var hår på golvet, och där har
+								Clevo gjort större skillnad än jag väntade mig."
+							</p>
+							<cite>Johan V., Göteborg</cite>
+						</blockquote>
+						<blockquote class="card">
+							<p>
+								"Jag jämförde länge med Roborock men ville inte lägga dubbla pengarna. Efter några
+								veckor känns valet fortfarande rimligt."
+							</p>
+							<cite>Annika B., Malmö</cite>
+						</blockquote>
+					</div>
+				</div>
+			</section>
+
+			<section class="section soft">
+				<div class="container wide">
+					<div class="section-header">
+						<p class="eyebrow">Produktdata</p>
+						<h2>Tekniska specifikationer</h2>
+						<p>De viktigaste tekniska uppgifterna för CLEVO L10 PRO samlade på ett ställe.</p>
+					</div>
+					<div class="spec-table table-wrap">
+						<table>
+							<tbody>
+								<tr><th>Produktnamn</th><td>CLEVO L10 PRO</td><th>Navigering</th><td>LDS lasernavigering</td></tr>
+								<tr><th>Batterityp</th><td>Inbyggt litiumjonbatteri</td><th>Batterikapacitet</th><td>2550 mAh</td></tr>
+								<tr><th>Batteritid</th><td>180 min</td><th>Sugkraft robot</th><td>5000 Pa</td></tr>
+								<tr><th>Sugeffekt basstation</th><td>20000 Pa</td><th>Sugeffektlägen</th><td>3 nivåer</td></tr>
+								<tr><th>Dammbehållare robot</th><td>280 ml</td><th>Dammpåse basstation</th><td>3 L</td></tr>
+								<tr><th>Vattentank</th><td>330 ml</td><th>Ljudnivå</th><td>≤60 dB</td></tr>
+								<tr><th>Robotens mått</th><td>300 × 300 × 93 mm</td><th>Basstationens mått</th><td>210 × 145 × 335 mm</td></tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="feature-grid spec-features">
+						<article class="reason-card card">
+							<h3>Självtömmande basstation</h3>
+							<p>Stationen suger ur roboten efter städning och samlar dammet i en försluten påse.</p>
+						</article>
+						<article class="reason-card card">
+							<h3>3-stegs sugkraft</h3>
+							<p>Välj läge efter hur smutsigt golvet är och hur mycket ljud du accepterar.</p>
+						</article>
+						<article class="reason-card card">
+							<h3>2-i-1 elektronisk vattentank</h3>
+							<p>Den elektroniska tanken låter roboten dammsuga och fukttorka i samma runda.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container">
+					<div class="section-header">
+						<p class="eyebrow">Frågor inför köp</p>
+						<h2>Det här undrar många innan de väljer robot</h2>
+					</div>
+					<div class="faq-list">
+						<details open>
+							<summary>Varför kan ett billigare alternativ hamna högst?</summary>
+							<p>
+								För att vårt betyg inte bara belönar flest funktioner. Vi väger även in pris,
+								underhåll och hur stor skillnad produkten gör i daglig användning.
+							</p>
+						</details>
+						<details>
+							<summary>Klarar laserbaserad navigering mörka rum?</summary>
+							<p>
+								Ja. LiDAR mäter avstånd med laser och behöver därför inte samma ljusförhållanden
+								som en kamerabaserad robot.
+							</p>
+						</details>
+						<details>
+							<summary>Är självtömning värt extra pengar?</summary>
+							<p>
+								Om du har husdjur, större ytor eller vill minimera underhåll är det en av de
+								funktioner som märks mest över tid.
+							</p>
+						</details>
+						<details>
+							<summary>Vad ska jag kontrollera om jag vill kunna returnera?</summary>
+							<p>
+								Läs återförsäljarens villkor för ångerrätt, skick på varan, returfrakt och hur
+								snabbt återbetalning sker.
+							</p>
+						</details>
+						<details>
+							<summary>Fungerar den på tjockare mattor?</summary>
+							<p>
+								Många mattor fungerar bra, men riktigt tjocka eller lösa mattor kan behöva spärras
+								av i appen.
+							</p>
+						</details>
+					</div>
+				</div>
+			</section>
+
+			<section class="section soft">
+				<div class="container">
+					<div class="section-header">
+						<p class="eyebrow">Innan du går till kassan</p>
+						<h2>Tre villkor som är värda att dubbelkolla</h2>
+					</div>
+					<div class="feature-grid">
+						<article class="reason-card card">
+							<h3>Ångerrätt</h3>
+							<p>Kontrollera hur länge du kan ångra köpet och vilket skick produkten måste vara i.</p>
+						</article>
+						<article class="reason-card card">
+							<h3>Garanti</h3>
+							<p>Garanti och reklamationsrätt är olika saker, så läs både butikens och tillverkarens villkor.</p>
+						</article>
+						<article class="reason-card card">
+							<h3>Returkostnad</h3>
+							<p>En tung robotstation kan vara dyr att skicka tillbaka om fri retur inte ingår.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container">
+					<div class="cost-card card">
+						<p class="eyebrow">Tidsvinsten</p>
+						<h2>Den största besparingen kan vara timmarna du slipper lägga</h2>
+						<p>
+							En robot ersätter inte all städning, men den kan ta hand om mycket av den återkommande
+							golvskötseln. För många hushåll är det viktigare än ännu en avancerad appfunktion.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section soft">
+				<div class="container">
+					<div class="final-card card">
+						<p class="eyebrow">Vårt mest prisvärda val 2026</p>
+						<h2>CLEVO L10 PRO - {winner.price}</h2>
+						<p>För dig som vill ha självtömning, LiDAR och lång batteritid utan premiumpris.</p>
+						<a class="button" href={winner.link} target="_blank" rel="nofollow sponsored noopener"
+							>Se pris hos återförsäljare</a
+						>
+						<small>Tillgänglighet kan variera mellan återförsäljare.</small>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.review-hero {
+		padding: 72px 0 54px;
+	}
+
+	.hero-grid {
+		align-items: center;
+		display: grid;
+		gap: 48px;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.hero-copy {
+		max-width: none;
+	}
+
+	.hero-copy h1 {
+		font-size: clamp(42px, 5vw, 58px);
+		margin: 8px 0 16px;
+		max-width: none;
+		overflow-wrap: anywhere;
+	}
+
+	.hero-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		margin-top: 22px;
+	}
+
+	.product-shot {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	.product-shot img {
+		border-radius: 14px;
+		display: block;
+		height: auto;
+		max-height: none;
+		object-fit: contain;
+		width: 100%;
+	}
+
+	.stat-band {
+		background: linear-gradient(180deg, #f7fbff 0%, var(--section) 100%);
+		border-bottom: 1px solid var(--line);
+		border-top: 1px solid var(--line);
+		padding: 24px 0;
+	}
+
+	.stat-grid {
+		display: grid;
+		gap: 14px;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.stat-grid span,
+	.stat-grid strong,
+	.stat-grid small {
+		display: block;
+	}
+
+	.stat-grid div {
+		background: #fff;
+		border: 1px solid #dfeaf5;
+		border-radius: 12px;
+		box-shadow: 0 12px 28px rgba(28, 47, 77, 0.07);
+		padding: 18px 18px 16px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.stat-grid div::before {
+		background: #d8f1ff;
+		border-radius: 999px;
+		content: '';
+		height: 44px;
+		position: absolute;
+		right: -14px;
+		top: -16px;
+		width: 44px;
+	}
+
+	.stat-grid .highlight-stat {
+		border-color: #9adcf7;
+		box-shadow: 0 16px 34px rgba(32, 167, 232, 0.14);
+	}
+
+	.stat-grid .highlight-stat::before {
+		background: var(--blue);
+	}
+
+	.stat-grid span {
+		color: var(--muted);
+		font-size: 11px;
+		font-weight: 900;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.stat-grid strong {
+		color: var(--blue-dark);
+		font-size: 25px;
+		letter-spacing: -0.04em;
+		line-height: 1.1;
+		margin-top: 8px;
+	}
+
+	.stat-grid small {
+		color: #718096;
+		font-size: 11px;
+		line-height: 1.45;
+		margin-top: 7px;
+	}
+
+	.trust-section {
+		background: #fff;
+		border-bottom: 1px solid var(--line);
+		padding: 18px 0;
+	}
+
+	.trust-grid {
+		display: grid;
+		gap: 12px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.trust-grid div {
+		background: #f7fbff;
+		border: 1px solid var(--line);
+		border-radius: 8px;
+		padding: 12px;
+	}
+
+	.trust-grid strong,
+	.trust-grid span {
+		display: block;
+	}
+
+	.trust-grid strong {
+		font-size: 12px;
+	}
+
+	.trust-grid span {
+		color: var(--muted);
+		font-size: 11px;
+		margin-top: 4px;
+	}
+
+	.winner-summary {
+		display: grid;
+		gap: 22px;
+		grid-template-columns: 1fr 1.2fr;
+		padding: 22px;
+	}
+
+	.winner-summary h2 {
+		margin: 7px 0 8px;
+	}
+
+	.mini-specs {
+		display: grid;
+		gap: 10px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.mini-specs div {
+		background: #f7fbff;
+		border-radius: 7px;
+		padding: 12px;
+	}
+
+	.mini-specs span,
+	.mini-specs strong {
+		display: block;
+	}
+
+	.mini-specs span {
+		color: var(--muted);
+		font-size: 11px;
+	}
+
+	.mini-specs strong {
+		color: var(--text);
+		font-size: 13px;
+		margin-top: 4px;
+	}
+
+	.rank-list {
+		display: grid;
+		gap: 14px;
+	}
+
+	.rank-card {
+		padding: 18px;
+	}
+
+	.rank-card.is-winner {
+		border-color: #bfe6fb;
+		padding-top: 0;
+	}
+
+	.recommend-badge {
+		background: linear-gradient(90deg, var(--blue), #49c3f4);
+		border-radius: 8px 8px 0 0;
+		color: #fff;
+		font-size: 12px;
+		font-weight: 900;
+		letter-spacing: 0.05em;
+		margin: 0 -18px 18px;
+		padding: 10px 18px;
+		text-transform: uppercase;
+	}
+
+	.rank-top {
+		align-items: flex-start;
+		display: grid;
+		gap: 14px;
+		grid-template-columns: 140px 1fr auto;
+		margin-bottom: 14px;
+	}
+
+	.rank-media {
+		aspect-ratio: 1;
+		border-radius: 10px;
+		box-shadow: 0 12px 28px rgba(28, 47, 77, 0.12);
+		overflow: hidden;
+	}
+
+	.rank-image {
+		display: block;
+		height: 100%;
+		object-fit: contain;
+		width: 100%;
+	}
+
+	.rank-number {
+		align-items: center;
+		background: var(--blue);
+		border-radius: 7px;
+		color: #fff;
+		display: inline-flex;
+		font-size: 12px;
+		font-weight: 900;
+		flex: 0 0 auto;
+		height: 26px;
+		justify-content: center;
+		width: 26px;
+	}
+
+	.rank-title {
+		align-items: center;
+		display: flex;
+		gap: 9px;
+		margin-bottom: 5px;
+	}
+
+	.rank-score {
+		text-align: right;
+	}
+
+	.rank-score strong,
+	.rank-score span {
+		display: block;
+	}
+
+	.rank-score strong {
+		color: var(--blue-dark);
+		font-size: 20px;
+		line-height: 1;
+	}
+
+	.rank-score span {
+		color: var(--muted);
+		font-size: 11px;
+		margin-top: 5px;
+	}
+
+	.price-link {
+		background: #eef8ff;
+		border-radius: 5px;
+		color: var(--blue-dark);
+		display: inline-block;
+		font-size: 11px;
+		font-weight: 900;
+		margin-top: 10px;
+		padding: 7px 10px;
+		white-space: nowrap;
+	}
+
+	.winner-detail {
+		background: #f7fbff;
+		border: 1px solid #dcecf8;
+		border-radius: 9px;
+		display: grid;
+		gap: 16px;
+		grid-template-columns: 0.95fr 1.4fr;
+		margin-top: 16px;
+		padding: 16px;
+	}
+
+	.winner-detail h4 {
+		margin-bottom: 8px;
+	}
+
+	.winner-detail p {
+		font-size: 12px;
+		line-height: 1.75;
+	}
+
+	.winner-spec-grid {
+		display: grid;
+		gap: 8px;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.winner-spec-grid div {
+		background: #fff;
+		border-radius: 7px;
+		padding: 10px;
+	}
+
+	.winner-spec-grid span,
+	.winner-spec-grid strong {
+		display: block;
+	}
+
+	.winner-spec-grid span {
+		color: var(--muted);
+		font-size: 10px;
+	}
+
+	.winner-spec-grid strong {
+		color: var(--text);
+		font-size: 12px;
+		margin-top: 3px;
+	}
+
+	.pros-grid {
+		border-top: 1px solid var(--line);
+		display: grid;
+		gap: 18px;
+		grid-template-columns: 1fr 1fr;
+		margin-top: 14px;
+		padding-top: 14px;
+	}
+
+	.pros-grid h4 {
+		margin-bottom: 8px;
+	}
+
+	.pros-grid li {
+		color: var(--muted);
+		font-size: 12px;
+		line-height: 1.7;
+	}
+
+	.reason-grid,
+	.feature-grid,
+	.compare-grid,
+	.chart-grid,
+	.testimonial-grid,
+	.article-grid {
+		display: grid;
+		gap: 14px;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.feature-grid,
+	.testimonial-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.compare-card {
+		padding: 18px;
+	}
+
+	.compare-card h3 {
+		margin-bottom: 12px;
+	}
+
+	.compare-card table {
+		margin-bottom: 12px;
+	}
+
+	.compare-card th,
+	.compare-card td {
+		font-size: 12px;
+		padding: 9px 10px;
+	}
+
+	.reason-card,
+	.chart-card,
+	.final-card {
+		padding: 18px;
+	}
+
+	.reason-card h3,
+	.chart-card h3 {
+		margin-bottom: 8px;
+	}
+
+	.chart-note {
+		font-size: 11px;
+		margin-bottom: 10px;
+	}
+
+	.article-copy {
+		display: grid;
+		gap: 16px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 980px;
+	}
+
+	.author-row {
+		align-items: center;
+		display: flex;
+		gap: 14px;
+	}
+
+	.author-row img {
+		border-radius: 50%;
+		height: 58px;
+		object-fit: cover;
+		width: 58px;
+	}
+
+	.article-copy h2,
+	.article-copy h3 {
+		margin-top: 4px;
+	}
+
+	.article-copy li {
+		color: var(--muted);
+	}
+
+	.article-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.article-grid h3 {
+		margin-bottom: 8px;
+		margin-top: 12px;
+	}
+
+	.testimonial-grid blockquote {
+		margin: 0;
+		padding: 18px;
+	}
+
+	.testimonial-grid cite {
+		color: var(--text);
+		display: block;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 800;
+		margin-top: 12px;
+	}
+
+	.spec-table {
+		margin-bottom: 14px;
+	}
+
+	.spec-table th,
+	.spec-table td {
+		font-size: 12px;
+	}
+
+	.spec-features {
+		margin-top: 14px;
+	}
+
+	.chart-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.bar-row {
+		align-items: center;
+		display: grid;
+		gap: 8px;
+		grid-template-columns: 1.1fr 1fr 32px;
+		margin: 9px 0;
+	}
+
+	.bar-row span {
+		color: var(--muted);
+		font-size: 11px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.bar-row div {
+		background: #e8f0f8;
+		border-radius: 999px;
+		height: 8px;
+		overflow: hidden;
+	}
+
+	.bar-row i {
+		background: var(--blue);
+		border-radius: inherit;
+		display: block;
+		height: 100%;
+	}
+
+	.score-row i {
+		background: #f0b24c;
+	}
+
+	.bar-row strong {
+		color: var(--text);
+		font-size: 11px;
+		text-align: right;
+	}
+
+	.faq-list {
+		display: grid;
+		gap: 10px;
+	}
+
+	details {
+		background: #fff;
+		border: 1px solid var(--line);
+		border-radius: 8px;
+		padding: 15px 17px;
+	}
+
+	summary {
+		cursor: pointer;
+		font-weight: 800;
+	}
+
+	details p {
+		margin-top: 10px;
+	}
+
+	.final-card {
+		text-align: center;
+	}
+
+	.final-card h2 {
+		margin: 8px 0;
+	}
+
+	.final-card .button {
+		margin-top: 16px;
+	}
+
+	.final-card small {
+		color: var(--muted);
+		display: block;
+		font-size: 11px;
+		margin-top: 10px;
+	}
+
+	.cost-card {
+		padding: 22px;
+	}
+
+	.cost-card h2 {
+		margin: 8px 0 10px;
+	}
+
+	@media (max-width: 880px) {
+		.hero-grid,
+		.winner-summary,
+		.winner-detail,
+		.pros-grid,
+		.reason-grid,
+		.feature-grid,
+		.compare-grid,
+		.testimonial-grid,
+		.article-grid,
+		.chart-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.product-shot {
+			max-width: 420px;
+		}
+
+		.mini-specs,
+		.winner-spec-grid,
+		.trust-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.stat-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 560px) {
+		.rank-top,
+		.mini-specs,
+		.trust-grid,
+		.rank-score {
+			text-align: left;
+		}
+	}
+</style>
