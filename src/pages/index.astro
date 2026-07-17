@@ -6,35 +6,35 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '../consts';
 
 const methodCards = [
 	{
-		title: 'Urval av produkter',
-		text: 'Vi tar med produkter som köpare faktiskt ställer mot varandra: etablerade favoriter, nya utmanare och modeller i samma användningsområde.',
+		title: 'Produkter som faktiskt jämförs',
+		text: 'Vi utgår från modeller som ofta hamnar på samma inköpslista: välkända alternativ, nya uppstickare och produkter i liknande prisklass.',
 	},
 	{
-		title: 'Kontroll av uppgifter',
-		text: 'Tekniska data, priser och villkor jämförs mot flera öppna källor innan de hamnar i våra sammanställningar.',
+		title: 'Fakta från flera håll',
+		text: 'Specifikationer, priser och villkor stäms av mot öppna källor så att guiden inte lutar sig mot en enda butikssida.',
 	},
 	{
-		title: 'Fokus på vardagen',
-		text: 'Tyngdpunkten ligger på sådant du märker efter köpet: installation, skötsel, ljud, tillbehör och hur smidigt allt fungerar hemma.',
+		title: 'Det som märks hemma',
+		text: 'Vi lägger störst vikt vid sådant som påverkar vardagen: installation, ljudnivå, underhåll, reservdelar och hur enkelt produkten är att använda.',
 	},
 	{
-		title: 'Enkel slutsats',
-		text: 'Vi försöker landa i en rak rekommendation och samtidigt vara tydliga med när ett annat val kan passa bättre.',
+		title: 'En tydlig rekommendation',
+		text: 'Målet är att ge ett konkret råd, men också att säga när produkten inte är rätt val för vissa behov.',
 	},
 ];
 
 const expectations = [
 	{
-		title: 'Tydliga prioriteringar',
-		text: 'Vi visar vilka funktioner som faktiskt påverkar användningen och vilka som mest låter bra i en annons.',
+		title: 'Prioriteringar som går att förstå',
+		text: 'Vi förklarar varför en funktion är viktig och när den mest är något som ser bra ut i marknadsföringen.',
 	},
 	{
-		title: 'Uppdaterad kontext',
-		text: 'När prisbild, lagerstatus eller nya modeller ändras behöver även rekommendationen kunna ändras.',
+		title: 'Pris och läge vägs in',
+		text: 'En bra produkt kan bli mindre intressant om priset ändras, och ett enklare val kan bli starkare vid rätt kampanj.',
 	},
 	{
-		title: 'Ärlig avgränsning',
-		text: 'Om en guide inte täcker ett visst behov säger vi det hellre än att låtsas att den passar alla.',
+		title: 'Tydliga avgränsningar',
+		text: 'Om en jämförelse inte svarar på ett specialbehov skriver vi det rakt ut i stället för att göra guiden bredare än den är.',
 	},
 ];
 ---
@@ -50,18 +50,18 @@ const expectations = [
 			<section class="home-hero">
 				<div class="container">
 					<p class="eyebrow">Om hushustest</p>
-					<h1>Enklare väg till rätt produktval</h1>
+					<h1>Tryggare val när du jämför produkter</h1>
 					<p>
-						hushustest hjälper dig att snabbt se skillnaden mellan produkter inom hemteknik och
-						vardag. Vi lyfter fram vad som är värt pengarna, vilka detaljer som spelar roll och
-						vilka begränsningar du bör känna till före köp.
+						hushustest gör det lättare att sålla bland hemteknik och vardagsprodukter. Vi lyfter
+						fram skillnaderna som spelar roll, vad som är rimligt att betala för och vilka
+						kompromisser som är bra att känna till innan du beställer.
 					</p>
 				</div>
 			</section>
 
 			<section class="section soft">
 				<div class="container">
-					<h2>Så tar vi fram våra jämförelser</h2>
+					<h2>Så arbetar vi med våra jämförelser</h2>
 					<div class="method-grid">
 						{
 							methodCards.map((card) => (
@@ -78,16 +78,16 @@ const expectations = [
 			<section class="section">
 				<div class="container">
 					<div class="section-copy">
-						<h2>Så väger vi ihop resultatet</h2>
+						<h2>Så bedömer vi helheten</h2>
 						<p>
-							Ett högt betyg handlar inte bara om en stark specifikation. Vi tittar på pris,
-							funktion, användarvänlighet, servicebehov och om fördelarna faktiskt märks i ett
-							vanligt hem.
+							Ett bra köp avgörs sällan av en enda specifikation. Därför väger vi samman pris,
+							prestanda, användarvänlighet, skötsel och hur stor nytta produkten faktiskt gör i
+							ett vanligt hem.
 						</p>
 						<ul class="tiny-list">
-							<li>Varje rekommendation ska gå att koppla till tydliga skillnader</li>
-							<li>Pris bedöms mot nytta, byggkvalitet och förväntad livslängd</li>
-							<li>Osäkra uppgifter lämnas öppna i stället för att fyllas med gissningar</li>
+							<li>Rekommendationer ska bygga på konkreta skillnader, inte magkänsla</li>
+							<li>Priset sätts i relation till nytta, kvalitet och förväntad hållbarhet</li>
+							<li>Oklara uppgifter markeras hellre än fylls ut med antaganden</li>
 						</ul>
 					</div>
 				</div>
@@ -96,11 +96,11 @@ const expectations = [
 			<section class="section soft">
 				<div class="container">
 					<div class="section-copy">
-						<h2>Vad du får av våra guider</h2>
+						<h2>Vad guiderna ska hjälpa dig med</h2>
 						<p>
-							Guiderna är skrivna för dig som vill komma vidare utan att läsa varje datablad
-							själv. Tonen ska vara praktisk, kontrollerbar och tydlig nog för ett riktigt
-							köpbeslut.
+							Vi skriver för dig som vill komma vidare i valet utan att läsa igenom varje
+							datablad själv. Språket ska vara rakt, praktiskt och lätt att kontrollera mot
+							egna behov.
 						</p>
 					</div>
 					<div class="expect-grid">
@@ -122,8 +122,8 @@ const expectations = [
 					<a class="latest-card card" href="/robotdammsugarna-2026-test/">
 						<h3>Bästa robotdammsugaren 2026</h3>
 						<p>
-							Vi jämför 7 robotdammsugare utifrån pris, batteritid, navigering, moppning och hur
-							de fungerar i ett vanligt hem.
+							En genomgång av 7 robotdammsugare där pris, batteritid, navigering, moppning och
+							vardaglig användning vägs samman.
 						</p>
 						<span>Läs testet</span>
 					</a>

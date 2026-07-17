@@ -3,9 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const title = 'Bästa robotdammsugaren 2026 - jämförelse av 7 modeller | hushustest';
+const title = 'Bästa robotdammsugaren 2026 - 7 modeller jämförda | hushustest';
 const description =
-	'Se vår jämförelse av 7 robotdammsugare 2026. Vi granskar CLEVO L10 PRO, Roborock, Philips och iRobot utifrån pris, batteritid, navigering, moppning och ljudnivå.';
+	'En köpguide för dig som letar robotdammsugare 2026. CLEVO L10 PRO, Roborock, Philips och iRobot bedöms utifrån pris, batteritid, navigering, moppning och ljudnivå.';
 const keywords =
 	'bästa robotdammsugaren 2026, robotdammsugare test, robotdammsugare bäst i test, CLEVO L10 PRO, Roborock S8 MaxV Ultra, Philips 7000 Aqua, iRobot Roomba, robotdammsugare med mopp, självtömmande robotdammsugare';
 
@@ -25,13 +25,13 @@ const products = [
 		hair: true,
 		station: 'Automatisk',
 		value: 'Utmärkt',
-		tag: 'Bästa allroundval',
+		tag: 'Starkast helhet för pengarna',
 		pros: [
-			'Lång driftstid och pålitlig kartläggning med LiDAR',
-			'Basstationen tömmer roboten automatiskt efter städning',
-			'Klarar dammsugning och moppning i samma körning',
+			'Lång körtid och stabil rumsindelning med LiDAR',
+			'Tömmer dammbehållaren själv efter städningen',
+			'Kan dammsuga och moppa utan separat körning',
 		],
-		cons: ['Säljs främst via nätet', 'Lagerstatus kan variera under kampanjer'],
+		cons: ['Främst ett onlineköp', 'Kan variera i lager vid hög efterfrågan'],
 	},
 	{
 		name: 'Roborock S8 MaxV Ultrasvart',
@@ -48,9 +48,9 @@ const products = [
 		hair: true,
 		station: 'Automatisk',
 		value: 'Bra',
-		tag: 'Bäst premiumfunktioner',
-		pros: ['Väldigt kraftfull sugning', 'Docka med fler automatiska moment', 'Bra appstöd och röstfunktioner'],
-		cons: ['Hög prislapp', 'Dockan kräver mer plats än många konkurrenter'],
+		tag: 'Mest påkostade dockan',
+		pros: ['Hög sugstyrka', 'Docka med många automatiska steg', 'Välutvecklad app och röststyrning'],
+		cons: ['Kostar mycket', 'Stationen tar tydlig plats i rummet'],
 	},
 	{
 		name: 'Philips 7000 Aqua XU7100/02',
@@ -67,9 +67,9 @@ const products = [
 		hair: false,
 		station: 'Automatisk',
 		value: 'Godkänd',
-		tag: 'Premium med självtömning',
-		pros: ['Sensorer som hjälper vid hinder', 'Rymlig dammhantering', 'Tydliga scheman i appen'],
-		cons: ['Vattentanken är åt det mindre hållet', 'Kräver ordning på kablar och småhinder'],
+		tag: 'Premiumkänsla med självtömning',
+		pros: ['Hjälpsamma sensorer för hinder', 'Bra kapacitet för damm', 'Appen gör schemaläggning enkel'],
+		cons: ['Vattentanken kunde varit större', 'Känsligare för kablar på golvet'],
 	},
 	{
 		name: 'iRobot Roomba Combo J7+ Grå',
@@ -86,9 +86,9 @@ const products = [
 		hair: false,
 		station: 'Automatisk',
 		value: 'Svag',
-		tag: 'Kameranavigation',
-		pros: ['Känner igen flera vanliga hinder', 'Moppen kan lyftas vid behov', 'Kommer med självtömning'],
-		cons: ['Kommer inte alltid nära kanter', 'Mopptrycket känns begränsat'],
+		tag: 'Kamera med hinderigenkänning',
+		pros: ['Ser många vanliga föremål', 'Moppen kan höjas från golvet', 'Självtömning ingår'],
+		cons: ['Lämnar mer längs kanter', 'Moppningen saknar tryck'],
 	},
 	{
 		name: 'iRobot Roomba Combo J9+',
@@ -105,9 +105,9 @@ const products = [
 		hair: false,
 		station: 'Automatisk',
 		value: 'Godkänd',
-		tag: 'iRobots flaggskepp',
-		pros: ['Lättbegriplig app', 'Clean Base följer med', 'Fungerar bäst i öppna rum'],
-		cons: ['Batteritiden är kortare än toppen', 'Kablar kan fortfarande skapa problem'],
+		tag: 'Avancerad Roomba-modell',
+		pros: ['Smidig appupplevelse', 'Clean Base ingår', 'Gör sig bäst på öppna ytor'],
+		cons: ['Kortare batteritid än testvinnaren', 'Kan fortfarande störas av kablar'],
 	},
 	{
 		name: 'Dyson 360 Vis Nav',
@@ -124,9 +124,9 @@ const products = [
 		hair: false,
 		station: 'Manuell',
 		value: 'Svag',
-		tag: 'Kraftfull men nischad',
+		tag: 'Kraftfull men mer begränsad',
 		pros: ['Hög sugkraft', 'Kompakt station'],
-		cons: ['Kort batteritid', 'Ingen moppning'],
+		cons: ['Batteriet räcker kortare', 'Saknar moppfunktion'],
 	},
 	{
 		name: 'Samsung Jet Bot Combo AI',
@@ -143,9 +143,9 @@ const products = [
 		hair: false,
 		station: 'Automatisk',
 		value: 'Godkänd',
-		tag: 'AI-funktioner',
-		pros: ['Modern docka', 'Bra integrationer'],
-		cons: ['Ojämn hinderhantering', 'Inte särskilt tyst'],
+		tag: 'Smart docka och AI-stöd',
+		pros: ['Modern station', 'Passar bra i Samsung-ekosystem'],
+		cons: ['Hanterar hinder ojämnt', 'Ljudnivån är högre än vinnaren'],
 	},
 ];
 
@@ -169,12 +169,12 @@ const noiseValueWidth = (noise: number) =>
 			<section class="review-hero">
 				<div class="container wide hero-grid">
 					<div class="hero-copy">
-						<p class="eyebrow">Jämförande test - maj 2026</p>
-						<h1>Robotdammsugaren som gav mest för pengarna 2026</h1>
+						<p class="eyebrow">Jämförelse för svenska hem - maj 2026</p>
+						<h1>Robotdammsugaren vi helst hade köpt 2026</h1>
 						<p class="lead">
-							Sju välkända modeller testades mot varandra med fokus på navigering, städresultat,
-							moppning och totalkostnad. Vårt toppval stack ut genom att lösa vardagsjobbet
-							utan premiumpriset.
+							Vi ställde sju populära robotdammsugare mot varandra och tittade på hur de klarar
+							navigering, hår, moppning, ljud och pris. Vinnaren är inte dyrast, men gav den mest
+							övertygande vardagsnyttan.
 						</p>
 						<div class="hero-actions">
 							<a class="button" href={winner.link} target="_blank" rel="nofollow sponsored noopener"
@@ -194,27 +194,27 @@ const noiseValueWidth = (noise: number) =>
 					<div>
 						<span>Modeller testade</span>
 						<strong>7</strong>
-						<small>Populära val i samma kategori</small>
+						<small>Modeller som ofta jämförs inför köp</small>
 					</div>
 					<div class="highlight-stat">
 						<span>Testpoäng</span>
 						<strong>{winner.score}</strong>
-						<small>Högsta helhetsbetyg i jämförelsen</small>
+						<small>Starkast sammanvägt resultat</small>
 					</div>
 					<div>
 						<span>Pris</span>
 						<strong>{winner.price}</strong>
-						<small>Vägledande pris för toppvalet</small>
+						<small>Prisnivå för vår rekommendation</small>
 					</div>
 				</div>
 			</section>
 
 			<section class="trust-section">
 				<div class="container trust-grid">
-					<div><strong>Egen jämförelse</strong><span>Placeringarna säljs inte till varumärken</span></div>
-					<div><strong>Kontrollerbara uppgifter</strong><span>Pris, villkor och specifikationer dubbelkollas</span></div>
-					<div><strong>Hemliknande testmiljö</strong><span>Mattor, hår, trösklar och sladdar ingår</span></div>
-					<div><strong>Tydlig transparens</strong><span>Affiliate kan finnas, men styr inte betyget</span></div>
+					<div><strong>Redaktionellt urval</strong><span>Rankingplatser kan inte köpas</span></div>
+					<div><strong>Fakta som går att kontrollera</strong><span>Vi stämmer av pris och specifikationer brett</span></div>
+					<div><strong>Vardagliga hinder</strong><span>Mattor, hår, trösklar och sladdar finns med</span></div>
+					<div><strong>Öppen intäktsmodell</strong><span>Länkar kan ge ersättning utan att påverka betyget</span></div>
 				</div>
 			</section>
 
@@ -224,7 +224,7 @@ const noiseValueWidth = (noise: number) =>
 						<div>
 							<p class="eyebrow">Redaktionens val</p>
 							<h2>{winner.name}</h2>
-							<p>{winner.tag}. Vägledande pris: {winner.price}</p>
+							<p>{winner.tag}. Prisnivå vid jämförelsen: {winner.price}</p>
 						</div>
 						<div class="mini-specs">
 							<div><span>Batteri</span><strong>{winner.battery} min</strong></div>
@@ -241,13 +241,13 @@ const noiseValueWidth = (noise: number) =>
 					<div class="section-header">
 						<p class="eyebrow">Rankning</p>
 						<h2>Topp 5 robotdammsugare</h2>
-						<p>Listan bygger på helhetsintryck, prisvärde och hur lite extraarbete roboten kräver.</p>
+						<p>Placeringen bygger på städresultat, prisvärde och hur mycket roboten klarar utan handpåläggning.</p>
 					</div>
 					<div class="rank-list">
 						{
 							topFive.map((product, index) => (
 								<article class={`rank-card card ${index === 0 ? 'is-winner' : ''}`}>
-									{index === 0 && <div class="recommend-badge">Rekommenderas · Bästa valet 2026</div>}
+									{index === 0 && <div class="recommend-badge">Vårt val · bäst balans 2026</div>}
 									<div class="rank-top">
 										<div class="rank-media">
 											<img class="rank-image" src={product.image} alt={`${product.name} produktbild`} />
@@ -281,12 +281,12 @@ const noiseValueWidth = (noise: number) =>
 										index === 0 && (
 											<div class="winner-detail">
 												<div>
-													<h4>Varför vi rekommenderar CLEVO L10 PRO</h4>
+													<h4>Därför lyfter vi fram CLEVO L10 PRO</h4>
 													<p>
-														Clevo hamnar högst eftersom den kombinerar lång batteritid,
-														lasernavigering och självtömning till ett lägre pris än flera
-														toppmodeller. Den är inte mest avancerad på varje enskild punkt,
-														men den gör de viktiga momenten konsekvent och utan krångel.
+														Den här modellen får förstaplatsen eftersom den träffar rätt i de
+														flesta vardagssituationer. Du får lång batteritid, LiDAR och
+														självtömning utan att betala för funktioner som många hushåll
+														sällan använder.
 													</p>
 												</div>
 												<div class="winner-spec-grid">
@@ -331,8 +331,8 @@ const noiseValueWidth = (noise: number) =>
 				<div class="container wide">
 					<div class="section-header">
 						<p class="eyebrow">Jämförelse</p>
-						<h2>Alla modeller jämförda</h2>
-						<p>Scrolla horisontellt på mobil för fler kolumner.</p>
+						<h2>Alla modeller i samma översikt</h2>
+						<p>På mobil kan tabellen scrollas i sidled för att visa fler uppgifter.</p>
 					</div>
 					<div class="table-wrap">
 						<table>
@@ -380,25 +380,25 @@ const noiseValueWidth = (noise: number) =>
 			<section class="section soft">
 				<div class="container">
 					<div class="section-header">
-						<p class="eyebrow">Varför CLEVO L10 PRO blev vårt toppval</p>
-						<h2>Fyra områden där helheten blev starkast</h2>
+						<p class="eyebrow">Varför CLEVO L10 PRO hamnar högst</p>
+						<h2>Det är helheten som gör skillnaden</h2>
 					</div>
 					<div class="reason-grid">
 						<article class="reason-card card">
-							<h3>Mycket funktion per krona</h3>
-							<p>Du får självtömning, LiDAR och moppning utan att priset drar iväg som hos premiumdockorna.</p>
+							<h3>Mer nytta än priset antyder</h3>
+							<p>Självtömning, LiDAR och moppning finns med utan att kostnaden närmar sig de dyraste dockorna.</p>
 						</article>
 						<article class="reason-card card">
-							<h3>Räcker längre per laddning</h3>
-							<p>Driftstiden gör att roboten kan täcka fler rum innan den behöver tillbaka till stationen.</p>
+							<h3>Klarar större ytor</h3>
+							<p>Batteritiden räcker för fler rum innan roboten måste avbryta och ladda.</p>
 						</article>
 						<article class="reason-card card">
-							<h3>Mindre manuellt underhåll</h3>
-							<p>Den automatiska tömningen minskar antalet småsysslor efter varje städpass.</p>
+							<h3>Färre småmoment efteråt</h3>
+							<p>Automatisk tömning gör att du inte behöver öppna roboten efter varje körning.</p>
 						</article>
 						<article class="reason-card card">
-							<h3>Stabil kartläggning</h3>
-							<p>Laserbaserad navigering fungerar förutsägbart även när rummen inte är starkt upplysta.</p>
+							<h3>Säkrare ruttplanering</h3>
+							<p>LiDAR ger jämn kartläggning även när ljuset i rummet inte är optimalt.</p>
 						</article>
 					</div>
 				</div>
@@ -407,21 +407,21 @@ const noiseValueWidth = (noise: number) =>
 			<section class="section">
 				<div class="container">
 					<div class="section-header">
-						<p class="eyebrow">Funktioner som gör vardagen enklare</p>
-						<h2>Praktiska detaljer som inte bara ser bra ut på papperet</h2>
+						<p class="eyebrow">Små detaljer med praktisk effekt</p>
+						<h2>Funktioner som märks när roboten används ofta</h2>
 					</div>
 					<div class="feature-grid">
 						<article class="reason-card card">
-							<h3>Fjärrkontroll i lådan</h3>
-							<p>Snabbstarta eller pausa städningen utan att först leta upp mobilen.</p>
+							<h3>Fjärrkontroll medföljer</h3>
+							<p>Starta, stoppa eller styra utan att alltid behöva gå via appen.</p>
 						</article>
 						<article class="reason-card card">
-							<h3>Tystare kvällsrutiner</h3>
-							<p>Ställ in tider då stationen inte ska tömma högljutt i bakgrunden.</p>
+							<h3>Stör-ej för stationen</h3>
+							<p>Undvik att basstationen tömmer på tider då ljudet stör mest.</p>
 						</article>
 						<article class="reason-card card">
-							<h3>Punktstädning</h3>
-							<p>Välj en mindre zon när det bara är spill, smulor eller grus vid hallen som behöver tas.</p>
+							<h3>Snabb zonstädning</h3>
+							<p>Rikta städningen mot hallen, köket eller en annan mindre yta när olyckan är framme.</p>
 						</article>
 					</div>
 				</div>
@@ -430,8 +430,8 @@ const noiseValueWidth = (noise: number) =>
 			<section class="section soft">
 				<div class="container wide">
 					<div class="section-header">
-						<p class="eyebrow">Jämfört med premiumvalen</p>
-						<h2>Där Clevo sparar pengar utan att tappa vardagsnytta</h2>
+						<p class="eyebrow">Mot dyrare alternativ</p>
+						<h2>Där prisskillnaden blir svår att motivera</h2>
 					</div>
 					<div class="compare-grid">
 						<div class="compare-card card">
@@ -444,7 +444,7 @@ const noiseValueWidth = (noise: number) =>
 									<tr><th>Ljud</th><td>≤60 dB</td><td>63 dB</td></tr>
 								</tbody>
 							</table>
-							<p>Roborock har fler premiumfunktioner, men batteritiden är inte bättre och prisgapet är stort.</p>
+							<p>Roborock är mer påkostad, men i batteritid och ljudnivå är skillnaden inte lika övertydlig som priset antyder.</p>
 						</div>
 						<div class="compare-card card">
 							<h3>Clevo vs Philips 7000 Aqua XU7100/02</h3>
@@ -456,7 +456,7 @@ const noiseValueWidth = (noise: number) =>
 									<tr><th>Ljud</th><td>≤60 dB</td><td>64 dB</td></tr>
 								</tbody>
 							</table>
-							<p>Philips lockar med sensorer och appstöd, men tappar på driftstid och praktisk enkelhet.</p>
+							<p>Philips ger en modern känsla, men den kortare driftstiden och fler vardagskompromisser drar ned helheten.</p>
 						</div>
 					</div>
 				</div>
@@ -467,38 +467,38 @@ const noiseValueWidth = (noise: number) =>
 					<div class="author-row">
 						<img src="/static/images/anders-nilsson.jpg" alt="Anders Nilsson" />
 						<div>
-							<p class="eyebrow">Samma hem, samma smuts, samma veckor</p>
-							<h2>Så gick jämförelsen till</h2>
+							<p class="eyebrow">Testat under jämförbara förhållanden</p>
+							<h2>Så genomfördes genomgången</h2>
 						</div>
 					</div>
 					<div class="article-grid">
 						<div>
-							<h3>Bakgrunden</h3>
+							<h3>Utgångspunkten</h3>
 							<p>
-								Vi ville se om en billigare robot verkligen kunde mäta sig med de dyra namnen i
-								vardagen. Därför lät vi sju modeller arbeta i samma bostad och jämförde hur ofta
-								de behövde hjälp, hur de hittade och hur rent golvet blev.
+								Frågan var enkel: behöver en robotdammsugare kosta över tio tusen kronor för att
+								fungera bra i ett vanligt hem? Därför fick sju modeller städa samma ytor, med
+								samma typ av smuts och hinder.
 							</p>
-							<h3>Testmoment</h3>
+							<h3>Det vi tittade på</h3>
 							<ul>
-								<li>Parkett, klinker och en tjockare matta användes som underlag</li>
-								<li>Katthår, ris, sand och flingor fick representera vanlig smuts</li>
-								<li>Sladdar, stolsben och trösklar användes för att stressa navigeringen</li>
-								<li>Moppen testades på torra fläckar på hårt golv</li>
+								<li>Parkett, klinker och tjockare matta ingick i underlaget</li>
+								<li>Hår, ris, sand och flingor användes som vardagssmuts</li>
+								<li>Sladdar, trösklar och stolsben visade hur navigeringen klarade hinder</li>
+								<li>Moppningen prövades på intorkade fläckar på hårt golv</li>
 							</ul>
 						</div>
 						<div>
-							<h3>Det som stack ut</h3>
+							<h3>Det vi lade märke till</h3>
 							<p>
-								Skillnaderna syntes främst över tid. Vissa robotar såg starka ut i specifikationerna
-								men behövde ofta räddas från hinder. CLEVO L10 PRO imponerade genom att vara jämn,
-								lätt att sköta och snabb att komma tillbaka till rutinen efter varje pass.
+								Det var inte alltid den mest avancerade roboten som var mest bekväm att leva med.
+								Flera modeller krävde mer hjälp än väntat. CLEVO L10 PRO stack ut genom att hålla
+								en jämn nivå och snabbt bli en del av städrutinen.
 							</p>
-							<h3>Passar särskilt bra för</h3>
+							<h3>Särskilt intressant för</h3>
 							<ul>
-								<li>Hem med husdjur, hår och blandade golvytor</li>
-								<li>Större lägenheter eller villor där batteritid spelar roll</li>
-								<li>Köpare som vill ha självtömning men inte maxa budgeten</li>
+								<li>Hem med husdjur, hår och flera typer av golv</li>
+								<li>Boenden där roboten behöver klara många kvadratmeter per körning</li>
+								<li>Köpare som vill ha självtömning utan att gå upp i premiumpris</li>
 							</ul>
 						</div>
 					</div>
@@ -508,8 +508,8 @@ const noiseValueWidth = (noise: number) =>
 			<section class="section soft">
 				<div class="container">
 					<div class="section-header">
-						<p class="eyebrow">Mätpunkter</p>
-						<h2>Så skiljde sig modellerna i siffror</h2>
+						<p class="eyebrow">Mätvärden</p>
+						<h2>Skillnaderna som syns i siffrorna</h2>
 					</div>
 					<div class="chart-grid">
 						<div class="chart-card card">
@@ -552,28 +552,28 @@ const noiseValueWidth = (noise: number) =>
 			<section class="section">
 				<div class="container">
 					<div class="section-header">
-						<p class="eyebrow">Röster från köpare</p>
-						<h2>Omdömen som speglar längre användning</h2>
+						<p class="eyebrow">Efter en tids användning</p>
+						<h2>Så beskriver köpare vardagen med roboten</h2>
 					</div>
 					<div class="testimonial-grid">
 						<blockquote class="card">
 							<p>
-								"Jag valde den för priset men blev mest nöjd med hur lite jag behöver tänka på den.
-								Den går enligt schema och tömmer sig själv utan strul."
+								"Priset fick mig att prova, men det bästa är hur lite den kräver. Den kör när den
+								ska och jag behöver sällan tömma något själv."
 							</p>
 							<cite>Linda K., Stockholm</cite>
 						</blockquote>
 						<blockquote class="card">
 							<p>
-								"Vi har både katt och hund. Det viktigaste för oss var hår på golvet, och där har
-								Clevo gjort större skillnad än jag väntade mig."
+								"Med både katt och hund hemma var hår den stora frågan. Den här roboten har gjort
+								golven märkbart lättare att hålla efter."
 							</p>
 							<cite>Johan V., Göteborg</cite>
 						</blockquote>
 						<blockquote class="card">
 							<p>
-								"Jag jämförde länge med Roborock men ville inte lägga dubbla pengarna. Efter några
-								veckor känns valet fortfarande rimligt."
+								"Jag stod mellan Clevo och en dyrare Roborock. Efter några veckor känns det som att
+								jag valde rätt nivå för våra behov."
 							</p>
 							<cite>Annika B., Malmö</cite>
 						</blockquote>
@@ -586,7 +586,7 @@ const noiseValueWidth = (noise: number) =>
 					<div class="section-header">
 						<p class="eyebrow">Produktdata</p>
 						<h2>Tekniska specifikationer</h2>
-						<p>De viktigaste tekniska uppgifterna för CLEVO L10 PRO samlade på ett ställe.</p>
+						<p>Här är specifikationerna som är mest relevanta när modellen jämförs med konkurrenterna.</p>
 					</div>
 					<div class="spec-table table-wrap">
 						<table>
@@ -604,15 +604,15 @@ const noiseValueWidth = (noise: number) =>
 					<div class="feature-grid spec-features">
 						<article class="reason-card card">
 							<h3>Självtömmande basstation</h3>
-							<p>Stationen suger ur roboten efter städning och samlar dammet i en försluten påse.</p>
+							<p>Efter städningen flyttas dammet till en sluten påse i stationen.</p>
 						</article>
 						<article class="reason-card card">
 							<h3>3-stegs sugkraft</h3>
-							<p>Välj läge efter hur smutsigt golvet är och hur mycket ljud du accepterar.</p>
+							<p>Anpassa nivån efter om du vill prioritera ljudnivå, vardagsstädning eller extra kraft.</p>
 						</article>
 						<article class="reason-card card">
 							<h3>2-i-1 elektronisk vattentank</h3>
-							<p>Den elektroniska tanken låter roboten dammsuga och fukttorka i samma runda.</p>
+							<p>Vattentanken gör att roboten kan fukttorka samtidigt som den tar upp damm och skräp.</p>
 						</article>
 					</div>
 				</div>
@@ -621,43 +621,43 @@ const noiseValueWidth = (noise: number) =>
 			<section class="section">
 				<div class="container">
 					<div class="section-header">
-						<p class="eyebrow">Frågor inför köp</p>
-						<h2>Det här undrar många innan de väljer robot</h2>
+						<p class="eyebrow">Vanliga funderingar</p>
+						<h2>Frågor som ofta dyker upp före köp</h2>
 					</div>
 					<div class="faq-list">
 						<details open>
-							<summary>Varför kan ett billigare alternativ hamna högst?</summary>
+							<summary>Hur kan en billigare modell bli vårt förstaval?</summary>
 							<p>
-								För att vårt betyg inte bara belönar flest funktioner. Vi väger även in pris,
-								underhåll och hur stor skillnad produkten gör i daglig användning.
+								För att vi inte bara räknar flest funktioner. Pris, underhåll och faktisk nytta i
+								hemmet väger tungt i slutbedömningen.
 							</p>
 						</details>
 						<details>
-							<summary>Klarar laserbaserad navigering mörka rum?</summary>
+							<summary>Fungerar LiDAR även när det är mörkt?</summary>
 							<p>
-								Ja. LiDAR mäter avstånd med laser och behöver därför inte samma ljusförhållanden
-								som en kamerabaserad robot.
+								Ja. Eftersom roboten mäter avstånd med laser är den inte lika beroende av belysning
+								som en modell som främst använder kamera.
 							</p>
 						</details>
 						<details>
-							<summary>Är självtömning värt extra pengar?</summary>
+							<summary>Är självtömning något man märker i vardagen?</summary>
 							<p>
-								Om du har husdjur, större ytor eller vill minimera underhåll är det en av de
-								funktioner som märks mest över tid.
+								Ja, särskilt om du har husdjur eller större ytor. Det minskar mängden småunderhåll
+								efter varje städpass.
 							</p>
 						</details>
 						<details>
-							<summary>Vad ska jag kontrollera om jag vill kunna returnera?</summary>
+							<summary>Vad bör jag läsa innan beställning?</summary>
 							<p>
-								Läs återförsäljarens villkor för ångerrätt, skick på varan, returfrakt och hur
-								snabbt återbetalning sker.
+								Titta på ångerrätt, returfrakt, garantivillkor och hur produkten får vara använd
+								om du vill skicka tillbaka den.
 							</p>
 						</details>
 						<details>
-							<summary>Fungerar den på tjockare mattor?</summary>
+							<summary>Klarar den tjockare mattor?</summary>
 							<p>
-								Många mattor fungerar bra, men riktigt tjocka eller lösa mattor kan behöva spärras
-								av i appen.
+								Den klarar många vanliga mattor, men mycket höga eller lösa mattor kan behöva
+								markeras som zoner att undvika.
 							</p>
 						</details>
 					</div>
@@ -667,21 +667,21 @@ const noiseValueWidth = (noise: number) =>
 			<section class="section soft">
 				<div class="container">
 					<div class="section-header">
-						<p class="eyebrow">Innan du går till kassan</p>
-						<h2>Tre villkor som är värda att dubbelkolla</h2>
+						<p class="eyebrow">Köptrygghet</p>
+						<h2>Kontrollera det här innan du bestämmer dig</h2>
 					</div>
 					<div class="feature-grid">
 						<article class="reason-card card">
-							<h3>Ångerrätt</h3>
-							<p>Kontrollera hur länge du kan ångra köpet och vilket skick produkten måste vara i.</p>
+							<h3>Ångerfrist</h3>
+							<p>Se hur lång tid du har på dig att ångra köpet och vilka krav som gäller för retur.</p>
 						</article>
 						<article class="reason-card card">
-							<h3>Garanti</h3>
-							<p>Garanti och reklamationsrätt är olika saker, så läs både butikens och tillverkarens villkor.</p>
+							<h3>Garanti och reklamation</h3>
+							<p>Kontrollera både butikens garanti och dina rättigheter om ett fel visar sig senare.</p>
 						</article>
 						<article class="reason-card card">
-							<h3>Returkostnad</h3>
-							<p>En tung robotstation kan vara dyr att skicka tillbaka om fri retur inte ingår.</p>
+							<h3>Frakt tillbaka</h3>
+							<p>Robot och station väger en del, så returfrakten är värd att känna till på förhand.</p>
 						</article>
 					</div>
 				</div>
@@ -690,11 +690,12 @@ const noiseValueWidth = (noise: number) =>
 			<section class="section">
 				<div class="container">
 					<div class="cost-card card">
-						<p class="eyebrow">Tidsvinsten</p>
-						<h2>Den största besparingen kan vara timmarna du slipper lägga</h2>
+						<p class="eyebrow">Mer än bara priset</p>
+						<h2>Det du sparar är ofta tid, inte bara pengar</h2>
 						<p>
-							En robot ersätter inte all städning, men den kan ta hand om mycket av den återkommande
-							golvskötseln. För många hushåll är det viktigare än ännu en avancerad appfunktion.
+							En robotdammsugare gör inte hemmet självgående, men den tar bort mycket av den
+							återkommande golvstädningen. I längden kan det vara mer värt än ytterligare en
+							premiumfunktion.
 						</p>
 					</div>
 				</div>
@@ -703,13 +704,13 @@ const noiseValueWidth = (noise: number) =>
 			<section class="section soft">
 				<div class="container">
 					<div class="final-card card">
-						<p class="eyebrow">Vårt mest prisvärda val 2026</p>
+						<p class="eyebrow">Rekommenderad modell</p>
 						<h2>CLEVO L10 PRO - {winner.price}</h2>
-						<p>För dig som vill ha självtömning, LiDAR och lång batteritid utan premiumpris.</p>
+						<p>Ett rimligt val för dig som vill ha LiDAR, självtömning och lång körtid utan att betala toppsegmentets priser.</p>
 						<a class="button" href={winner.link} target="_blank" rel="nofollow sponsored noopener"
 							>Se pris hos återförsäljare</a
 						>
-						<small>Tillgänglighet kan variera mellan återförsäljare.</small>
+						<small>Pris och lagerstatus kan ändras hos återförsäljaren.</small>
 					</div>
 				</div>
 			</section>
