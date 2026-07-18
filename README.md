@@ -1,6 +1,6 @@
-# hushustest
+# scanditest
 
-Astro static site for a Swedish product comparison website inspired by hushustest.
+Astro static site for a Swedish product comparison website named scanditest.
 
 ## Project Structure
 
