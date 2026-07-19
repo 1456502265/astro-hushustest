@@ -765,7 +765,7 @@ const noiseValueWidth = (noise: number) =>
 	}
 
 	.stat-band {
-		background: linear-gradient(180deg, #f7fbff 0%, var(--section) 100%);
+		background: linear-gradient(180deg, #f6fcff 0%, var(--section) 100%);
 		border-bottom: 1px solid var(--line);
 		border-top: 1px solid var(--line);
 		padding: 24px 0;
@@ -794,7 +794,7 @@ const noiseValueWidth = (noise: number) =>
 	}
 
 	.stat-grid div::before {
-		background: #d8f1ff;
+		background: rgba(0, 200, 224, 0.18);
 		border-radius: 999px;
 		content: '';
 		height: 44px;
@@ -805,12 +805,12 @@ const noiseValueWidth = (noise: number) =>
 	}
 
 	.stat-grid .highlight-stat {
-		border-color: #9adcf7;
-		box-shadow: 0 16px 34px rgba(32, 167, 232, 0.14);
+		border-color: rgba(0, 128, 255, 0.24);
+		box-shadow: 0 16px 34px rgba(0, 128, 255, 0.14);
 	}
 
 	.stat-grid .highlight-stat::before {
-		background: var(--blue);
+		background: linear-gradient(135deg, var(--blue-start), var(--blue-end));
 	}
 
 	.stat-grid span {
@@ -919,12 +919,12 @@ const noiseValueWidth = (noise: number) =>
 	}
 
 	.rank-card.is-winner {
-		border-color: #bfe6fb;
+		border-color: rgba(0, 128, 255, 0.24);
 		padding-top: 0;
 	}
 
 	.recommend-badge {
-		background: linear-gradient(90deg, var(--blue), #49c3f4);
+		background: linear-gradient(90deg, var(--blue-start), var(--blue-end));
 		border-radius: 8px 8px 0 0;
 		color: #fff;
 		font-size: 12px;
@@ -959,7 +959,7 @@ const noiseValueWidth = (noise: number) =>
 
 	.rank-number {
 		align-items: center;
-		background: var(--blue);
+		background: linear-gradient(135deg, var(--blue-start), var(--blue-end));
 		border-radius: 7px;
 		color: #fff;
 		display: inline-flex;
@@ -1000,7 +1000,7 @@ const noiseValueWidth = (noise: number) =>
 	}
 
 	.price-link {
-		background: #eef8ff;
+		background: #edf9ff;
 		border-radius: 5px;
 		color: var(--blue-dark);
 		display: inline-block;
@@ -1012,8 +1012,8 @@ const noiseValueWidth = (noise: number) =>
 	}
 
 	.winner-detail {
-		background: #f7fbff;
-		border: 1px solid #dcecf8;
+		background: #f6fcff;
+		border: 1px solid rgba(0, 128, 255, 0.16);
 		border-radius: 9px;
 		display: grid;
 		gap: 16px;
@@ -1222,7 +1222,7 @@ const noiseValueWidth = (noise: number) =>
 	}
 
 	.bar-row i {
-		background: var(--blue);
+		background: linear-gradient(90deg, var(--blue-start), var(--blue-end));
 		border-radius: inherit;
 		display: block;
 		height: 100%;
@@ -1290,6 +1290,7 @@ const noiseValueWidth = (noise: number) =>
 		.hero-grid,
 		.winner-summary,
 		.winner-detail,
+		.rank-top,
 		.pros-grid,
 		.reason-grid,
 		.feature-grid,
@@ -1313,14 +1314,75 @@ const noiseValueWidth = (noise: number) =>
 		.stat-grid {
 			grid-template-columns: 1fr;
 		}
+
+		.rank-media {
+			max-width: 260px;
+			width: 100%;
+		}
+
+		.rank-score {
+			align-items: flex-start;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px 12px;
+			text-align: left;
+		}
+
+		.rank-score strong,
+		.rank-score span {
+			display: inline-flex;
+		}
+
+		.rank-score .price-link {
+			margin-top: 0;
+		}
 	}
 
 	@media (max-width: 560px) {
-		.rank-top,
 		.mini-specs,
-		.trust-grid,
+		.trust-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.rank-card {
+			padding: 14px;
+		}
+
+		.rank-card.is-winner {
+			padding-top: 0;
+		}
+
+		.recommend-badge {
+			margin: 0 -14px 14px;
+			padding: 9px 14px;
+		}
+
+		.rank-top {
+			gap: 12px;
+		}
+
+		.rank-media {
+			max-width: none;
+		}
+
+		.rank-title {
+			align-items: flex-start;
+		}
+
+		.rank-title h3 {
+			font-size: 18px;
+			line-height: 1.18;
+		}
+
 		.rank-score {
-			text-align: left;
+			border-top: 1px solid var(--line);
+			padding-top: 12px;
+			width: 100%;
+		}
+
+		.rank-score .price-link {
+			text-align: center;
+			width: 100%;
 		}
 	}
 </style>
