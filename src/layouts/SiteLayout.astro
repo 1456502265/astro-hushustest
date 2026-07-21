@@ -9,7 +9,6 @@ interface Props {
 	keywords?: string;
 	image?: string;
 	lang?: string;
-	gtmId?: string;
 }
 
 const {
@@ -18,8 +17,9 @@ const {
 	keywords,
 	image,
 	lang = 'sv',
-	gtmId = import.meta.env.PUBLIC_GTM_ID,
 } = Astro.props;
+
+const GTM_ID = 'GTM-WZWSSQWC';
 ---
 
 <!doctype html>
@@ -27,8 +27,8 @@ const {
 	<head>
 		<BaseHead title={title} description={description} keywords={keywords} image={image} />
 		{
-			gtmId && (
-				<script is:inline define:vars={{ gtmId }}>
+			GTM_ID && (
+				<script is:inline define:vars={{ GTM_ID }}>
 					(function (w, d, s, l, i) {
 						w[l] = w[l] || [];
 						w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
@@ -38,17 +38,17 @@ const {
 						j.async = true;
 						j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
 						f.parentNode.insertBefore(j, f);
-					})(window, document, 'script', 'dataLayer', gtmId);
+					})(window, document, 'script', 'dataLayer', GTM_ID);
 				</script>
 			)
 		}
 	</head>
 	<body>
 		{
-			gtmId && (
+			GTM_ID && (
 				<noscript>
 					<iframe
-						src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+						src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
 						height="0"
 						width="0"
 						style="display:none;visibility:hidden"

@@ -20,17 +20,17 @@ Astro 会根据 `src/pages/` 下的文件生成路由。
 - `src/styles/global.css` - 全局样式、主题色和响应式样式。
 - `public/static/images/` - 测评页使用的产品图和作者图。
 
-## 环境变量
+## GTM 配置
 
 GTM 统一配置在 `src/layouts/SiteLayout.astro` 中，不需要每个页面单独添加。
 
-本地开发时可以在项目根目录创建 `.env` 文件；线上部署时在 Cloudflare 环境变量中配置同名变量：
+当前 GTM ID 直接写在项目中：
 
-```txt
-PUBLIC_GTM_ID=GTM-XXXXXXX
+```ts
+const GTM_ID = "GTM-WZWSSQWC";
 ```
 
-如果没有配置 `PUBLIC_GTM_ID`，页面不会输出 GTM 代码。
+如果后续要更换 GTM，只需要修改 `src/layouts/SiteLayout.astro` 中的 `GTM_ID`。
 
 ## SEO
 
