@@ -1,7 +1,5 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '../consts';
 
 const methodCards = [
@@ -39,14 +37,8 @@ const expectations = [
 ];
 ---
 
-<!doctype html>
-<html lang="sv">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} keywords={SITE_KEYWORDS} />
-	</head>
-	<body>
-		<Header />
-		<main>
+<SiteLayout title={SITE_TITLE} description={SITE_DESCRIPTION} keywords={SITE_KEYWORDS}>
+	<main>
 			<section class="home-hero">
 				<div class="container">
 					<p class="eyebrow">Om scanditest</p>
@@ -129,10 +121,8 @@ const expectations = [
 					</a>
 				</div>
 			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+	</main>
+</SiteLayout>
 
 <style>
 	.home-hero {
